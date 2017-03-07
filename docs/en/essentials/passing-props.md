@@ -40,6 +40,8 @@ const router = new VueRouter({
 
 This allows you to use the component anywhere, which makes the component easier to reuse and test.
 
+> Note that nested route views receive props from their parent component and therefore cannot be passed passed props from the route.
+
 ### Boolean mode
 
 When props is set to true, the route.params will be set as the component props.
@@ -74,6 +76,5 @@ The url: `/search?q=vue` would pass `{query: "vue"}` as props to the SearchUser 
 
 Try to keep the props function stateless, as it's only evaluated on route changes.
 Use a wrapper component if you need state to define the props, that way vue can react to state changes.
-
 
 For advanced usage, checkout the [example](https://github.com/vuejs/vue-router/blob/dev/examples/route-props/app.js).
